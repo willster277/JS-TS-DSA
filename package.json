@@ -1,16 +1,18 @@
 {
-  "name": "new-folder",
+  "name": "js-ts-dsa",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig.types.json",
     "build:watch": "nodemon --exec pnpm build",
     "test": "bash test.sh",
-    "test:no-bash":"mocha 'src/*.spec.ts' --loader=ts-node/esm --experimental-specifier-resolution=node --timeout=30000 --recursive"
+    "test:watch": "nodemon --exec pnpm test",
+    "test:no-bash": "mocha 'src/*.spec.ts' --loader=ts-node/esm --experimental-specifier-resolution=node --timeout=30000 --recursive",
+    "test:nb:watch": "nodemon --exec pnpm test:no-bash"
   },
   "keywords": [],
-  "author": "",
+  "author": "Will 'Willster' Johnson",
   "license": "ISC",
   "devDependencies": {
     "@types/chai": "^4.3.1",
