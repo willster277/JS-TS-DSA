@@ -1,6 +1,7 @@
+// TODO: implement `StackOptions` tests PREREQUISITE: Implement `applyOptions` in class (./stack.ts)
 import "mocha";
 import i from "chai";
-import Stack from "./stack.mock";
+import Stack from "./stack";
 
 describe("Stack", () => {
   // @ts-ignore
@@ -40,6 +41,9 @@ describe("Stack", () => {
       i.expect(myStack.pop()).to.equal(2);
       i.expect(myStack.pop()).to.equal(1);
     });
+    // it("Should have `applyOptions()` method ~~~~~~~~   (method) Stack<T>.applyOptions(options: IStackOptions): void", () => {
+    //   i.expect(myStack?.applyOptions).to.be.a("function");
+    // });
   });
   describe("Performing in use cases", () => {
     it("Should pass a simple palindrome test ('racecar')", () => {
