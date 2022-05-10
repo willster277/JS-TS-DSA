@@ -12,7 +12,7 @@ if [ -z $arg1 ]; then
 fi;
 
 # if arg1 != "*" echo "custom"
-if [ $arg1 != "*" ]; then
+if [[ $arg1 != "*" ]]; then
     echo -e "\033[33mWARN: Using 'src/$arg1.spec.ts' as the test file pattern.\033[0m";
     echo -e "\033[33m      This feature is haphazardly implemented and will not ensure the file(s) exist.\033[0m";
 fi;

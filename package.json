@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc -p tsconfig.json && tsc -p tsconfig.types.json",
-    "build:watch": "nodemon --exec pnpm build",
+    "build:watch": "nodemon --delay 5000ms -e ts --ignore dist/ --ignore 'src/*.spec.ts' --exec pnpm build",
     "test": "bash test.sh",
-    "test:watch": "nodemon --exec pnpm test",
+    "test:watch": "nodemon --delay 5000ms -e ts --ignore dist/ --exec pnpm test",
     "test:no-bash": "mocha 'src/*.spec.ts' --loader=ts-node/esm --experimental-specifier-resolution=node --timeout=30000 --recursive",
-    "test:nb:watch": "nodemon --exec pnpm test:no-bash"
+    "test:nb:watch": "nodemon --delay 5000ms -e ts --ignore dist/ --exec pnpm test:no-bash"
   },
   "keywords": [],
   "author": "Will 'Willster' Johnson",
